@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Support — ArchiveLab</title>
+<meta name="description" content="ArchiveLab support — FAQ, troubleshooting, and contact information.">
+<link rel="canonical" href="https://gentelmandi.github.io/archivelab/support/">
+<style>
+  :root {
+    --purple: #6B4EFF;
+    --purple-light: #ede9ff;
+    --blue: #2563EB;
+    --gray-50: #f8f8fc;
+    --gray-100: #f0f0f8;
+    --gray-200: #e2e2ee;
+    --gray-500: #6b7280;
+    --gray-700: #374151;
+    --gray-900: #111827;
+    --radius: 14px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; color: var(--gray-900); background: var(--gray-50); line-height: 1.6; }
+  nav { background: white; border-bottom: 1px solid var(--gray-200); padding: 0 24px; height: 60px; display: flex; align-items: center; justify-content: space-between; }
+  .nav-logo { font-size: 18px; font-weight: 700; color: var(--gray-900); text-decoration: none; }
+  .nav-logo span { color: var(--purple); }
+  .nav-back { font-size: 14px; color: var(--purple); text-decoration: none; display: flex; align-items: center; gap: 4px; }
+  .nav-back:hover { text-decoration: underline; }
+
+  .hero { background: linear-gradient(160deg, #7B7DC8 0%, #5A5FA8 100%); padding: 64px 24px; text-align: center; }
+  .hero h1 { font-size: clamp(28px, 5vw, 44px); font-weight: 800; color: white; margin-bottom: 12px; }
+  .hero p { font-size: 17px; color: rgba(255,255,255,0.8); max-width: 480px; margin: 0 auto; }
+
+  .content { max-width: 760px; margin: 0 auto; padding: 56px 24px; }
+
+  .search-box { background: white; border: 1.5px solid var(--gray-200); border-radius: 100px; padding: 14px 22px; display: flex; align-items: center; gap: 10px; margin-bottom: 48px; box-shadow: 0 2px 12px rgba(0,0,0,0.05); }
+  .search-box input { border: none; outline: none; font-size: 15px; color: var(--gray-900); flex: 1; background: transparent; }
+  .search-box input::placeholder { color: var(--gray-500); }
+  .search-icon { color: var(--gray-500); font-size: 18px; }
+
+  .section-title { font-size: 22px; font-weight: 700; margin-bottom: 16px; color: var(--gray-900); }
+
+  /* FAQ */
+  .faq-list { margin-bottom: 56px; }
+  .faq-item { background: white; border-radius: var(--radius); border: 1px solid var(--gray-200); margin-bottom: 8px; overflow: hidden; }
+  .faq-q { display: flex; justify-content: space-between; align-items: center; padding: 18px 20px; cursor: pointer; font-size: 15px; font-weight: 600; color: var(--gray-900); gap: 12px; user-select: none; }
+  .faq-q:hover { background: var(--gray-50); }
+  .faq-icon { font-size: 18px; color: var(--purple); flex-shrink: 0; transition: transform 0.2s; }
+  .faq-item.open .faq-icon { transform: rotate(45deg); }
+  .faq-a { font-size: 14px; color: var(--gray-700); line-height: 1.7; padding: 0 20px 18px; display: none; }
+  .faq-item.open .faq-a { display: block; }
+
+  /* QUICK TIPS */
+  .tips-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-bottom: 56px; }
+  .tip-card { background: white; border-radius: var(--radius); border: 1px solid var(--gray-200); padding: 20px; }
+  .tip-num { width: 32px; height: 32px; border-radius: 50%; background: var(--purple-light); color: var(--purple); font-size: 13px; font-weight: 700; display: flex; align-items: center; justify-content: center; margin-bottom: 10px; }
+  .tip-card h4 { font-size: 14px; font-weight: 700; margin-bottom: 6px; }
+  .tip-card p { font-size: 13px; color: var(--gray-500); line-height: 1.55; }
+
+  /* CONTACT */
+  .contact-box { background: linear-gradient(135deg, #1a1040, #0f0a30); border-radius: 20px; padding: 40px; text-align: center; }
+  .contact-box h2 { font-size: 24px; font-weight: 800; color: white; margin-bottom: 10px; }
+  .contact-box p { font-size: 15px; color: rgba(255,255,255,0.6); margin-bottom: 28px; }
+  .contact-email { display: inline-flex; align-items: center; gap: 8px; background: var(--purple); color: white; padding: 14px 28px; border-radius: 100px; text-decoration: none; font-size: 15px; font-weight: 700; transition: background 0.15s; }
+  .contact-email:hover { background: #5a3fe0; }
+  .contact-note { font-size: 13px; color: rgba(255,255,255,0.4); margin-top: 14px; }
+
+  footer { background: var(--gray-900); color: rgba(255,255,255,0.5); padding: 32px 24px; text-align: center; }
+  footer a { color: rgba(255,255,255,0.5); text-decoration: none; margin: 0 10px; font-size: 13px; }
+  footer a:hover { color: white; }
+  .footer-copy { font-size: 12px; color: rgba(255,255,255,0.3); margin-top: 12px; }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="../" class="nav-logo">Archive<span>Lab</span></a>
+  <a href="../" class="nav-back">← Back to home</a>
+</nav>
+
+<div class="hero">
+  <h1>Support Center</h1>
+  <p>Find answers, tips, and ways to get in touch. We're here to help.</p>
+</div>
+
+<div class="content">
+
+  <div class="search-box">
+    <span class="search-icon">🔍</span>
+    <input type="text" placeholder="Search for answers…" id="searchInput" oninput="filterFaq(this.value)">
+  </div>
+
+  <!-- FAQ -->
+  <h2 class="section-title">Frequently Asked Questions</h2>
+  <div class="faq-list" id="faqList">
+
+    <div class="faq-item" data-q="how add screenshot import capture">
+      <div class="faq-q" onclick="toggleFaq(this)">How do I add a screenshot to ArchiveLab? <span class="faq-icon">+</span></div>
+      <div class="faq-a">Tap the blue <strong>ADD SCREENSHOT</strong> button at the bottom of any Social Space or folder. You can select one or more images from your photo library. ArchiveLab does not auto-import screenshots — all imports are manual so you stay in control of what you archive.</div>
+    </div>
+
+    <div class="faq-item" data-q="ocr text extraction not working recognition">
+      <div class="faq-q" onclick="toggleFaq(this)">OCR text extraction isn't working. What should I do? <span class="faq-icon">+</span></div>
+      <div class="faq-a">Make sure the screenshot contains clear, readable text (not handwriting or heavily stylized fonts). OCR works best on standard social media text. If results are empty, try a different screenshot. ArchiveLab uses Google ML Kit for on-device recognition — no internet is required.</div>
+    </div>
+
+    <div class="faq-item" data-q="offline internet connection wifi">
+      <div class="faq-q" onclick="toggleFaq(this)">Does ArchiveLab need an internet connection? <span class="faq-icon">+</span></div>
+      <div class="faq-a">No. All OCR processing happens entirely on your device using Google ML Kit. The only feature that requires a network connection is watching rewarded video ads to earn extra daily OCR credits. All your data remains on-device at all times.</div>
+    </div>
+
+    <div class="faq-item" data-q="daily limit quota scans ocr credits extra">
+      <div class="faq-q" onclick="toggleFaq(this)">What is the daily OCR scan limit? How do I get more? <span class="faq-icon">+</span></div>
+      <div class="faq-a">ArchiveLab includes a daily quota of OCR scans as part of the free model. You can earn 5 additional scans by watching a short rewarded video ad. The counter resets each day.</div>
+    </div>
+
+    <div class="faq-item" data-q="canvas what how use link connect">
+      <div class="faq-q" onclick="toggleFaq(this)">What is the Canvas and how do I use it? <span class="faq-icon">+</span></div>
+      <div class="faq-a">The Canvas is an infinite visual workspace (second tab at the bottom). You can add screenshots, folders, and OCR results as cards, then <strong>link</strong> them by selecting an item and tapping "Link selected". Drag cards to arrange them spatially. Use pinch-to-zoom to navigate. It's designed to help you map connections between ideas visually.</div>
+    </div>
+
+    <div class="faq-item" data-q="social spaces platform organize instagram tiktok">
+      <div class="faq-q" onclick="toggleFaq(this)">What are Social Spaces? <span class="faq-icon">+</span></div>
+      <div class="faq-a">Social Spaces are pre-made containers for each social platform — Instagram, TikTok, X (Twitter), Reddit, YouTube, LinkedIn, Facebook, Pinterest, Threads, and more. Each space holds folders and captures. This keeps your archive organized by source from day one.</div>
+    </div>
+
+    <div class="faq-item" data-q="search find text full-text archive">
+      <div class="faq-q" onclick="toggleFaq(this)">How does search work? <span class="faq-icon">+</span></div>
+      <div class="faq-a">The search bar at the top of the home screen searches across all extracted OCR text, folder names, comments, and tags simultaneously. Results appear instantly as you type. Everything is indexed locally on your device.</div>
+    </div>
+
+    <div class="faq-item" data-q="export txt csv share data">
+      <div class="faq-q" onclick="toggleFaq(this)">How do I export my data? <span class="faq-icon">+</span></div>
+      <div class="faq-a">Inside any folder's detail view, scroll to the bottom to find the <strong>TXT</strong> and <strong>CSV</strong> export buttons. TXT exports a plain text version of all extracted content; CSV exports a structured spreadsheet-compatible file. You can also share via the share sheet button.</div>
+    </div>
+
+    <div class="faq-item" data-q="delete remove screenshot folder">
+      <div class="faq-q" onclick="toggleFaq(this)">How do I delete a screenshot or folder? <span class="faq-icon">+</span></div>
+      <div class="faq-a">To delete a screenshot, open it and use the menu (···) or swipe left in a list view. To delete a folder, tap the (···) icon next to the folder name and select Delete. Note: deleting a folder removes all captures inside it — this cannot be undone.</div>
+    </div>
+
+    <div class="faq-item" data-q="privacy data cloud server upload personal information">
+      <div class="faq-q" onclick="toggleFaq(this)">Is my data private? Do you store anything? <span class="faq-icon">+</span></div>
+      <div class="faq-a">Yes, fully private. ArchiveLab never uploads your screenshots, OCR text, or any personal data to any server. Everything is processed and stored locally on your device. The only third-party SDK that may collect minimal analytics data is Google AdMob for displaying ads. See our <a href="../privacy/" style="color:var(--purple);">Privacy Policy</a> for full details.</div>
+    </div>
+
+    <div class="faq-item" data-q="ads advertising admob remove disable">
+      <div class="faq-q" onclick="toggleFaq(this)">Why are there ads in the app? <span class="faq-icon">+</span></div>
+      <div class="faq-a">ArchiveLab is free and we use Google AdMob to display ads that support ongoing development. Ads are shown in non-intrusive banner format. Rewarded video ads are optional and only shown when you choose to earn extra OCR credits. We do not sell your data to advertisers.</div>
+    </div>
+
+    <div class="faq-item" data-q="backup restore transfer new phone icloud">
+      <div class="faq-q" onclick="toggleFaq(this)">Can I back up or transfer my archive to a new phone? <span class="faq-icon">+</span></div>
+      <div class="faq-a">Currently, ArchiveLab stores all data locally on your device. We recommend using your phone's native backup (iCloud for iOS, Google One for Android) to include the app data. A dedicated export/import feature may be added in a future update.</div>
+    </div>
+
+  </div>
+
+  <!-- QUICK TIPS -->
+  <h2 class="section-title">Quick Tips</h2>
+  <div class="tips-grid">
+    <div class="tip-card">
+      <div class="tip-num">1</div>
+      <h4>Use tags strategically</h4>
+      <p>Tags work across all Social Spaces. Great for cross-platform themes like "inspiration" or "competitor".</p>
+    </div>
+    <div class="tip-card">
+      <div class="tip-num">2</div>
+      <h4>Canvas zoom levels</h4>
+      <p>Pinch out to see the full map, pinch in to read individual OCR result cards on the canvas.</p>
+    </div>
+    <div class="tip-card">
+      <div class="tip-num">3</div>
+      <h4>Search before importing</h4>
+      <p>Before adding a screenshot, search first — you might already have it archived from a previous session.</p>
+    </div>
+    <div class="tip-card">
+      <div class="tip-num">4</div>
+      <h4>Long-press for quick actions</h4>
+      <p>Long-press any screenshot or folder card for a quick-action menu without opening the item.</p>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="contact-box">
+    <h2>Still need help?</h2>
+    <p>We typically reply within 24–48 hours. Please include your device model and iOS/Android version in your message.</p>
+    <a href="mailto:gentelmandi@gmail.com?subject=ArchiveLab Support" class="contact-email">
+      ✉️ gentelmandi@gmail.com
+    </a>
+    <p class="contact-note">Response time: 24–48 hours · English & French supported</p>
+  </div>
+
+</div>
+
+<footer>
+  <a href="../">Home</a>
+  <a href="../privacy/">Privacy Policy</a>
+  <a href="mailto:gentelmandi@gmail.com">Contact</a>
+  <a href="https://github.com/gentelmandi" target="_blank" rel="noopener">GitHub</a>
+  <div class="footer-copy">© 2025 ArchiveLab</div>
+</footer>
+
+<script>
+function toggleFaq(el) {
+  const item = el.closest('.faq-item');
+  item.classList.toggle('open');
+}
+function filterFaq(val) {
+  const q = val.toLowerCase();
+  document.querySelectorAll('.faq-item').forEach(item => {
+    const text = (item.dataset.q + ' ' + item.textContent).toLowerCase();
+    item.style.display = !q || text.includes(q) ? '' : 'none';
+  });
+}
+</script>
+</body>
+</html>
